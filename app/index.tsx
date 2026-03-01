@@ -10,7 +10,7 @@ export default function Slider() {
   const [index, setIndex] = useState(0);
   const handleNext = () => {
     if (index === sliders.length - 1) {
-      router.push("/login");
+      router.push("/(auth)/login");
     } else {
       sliderRef.current?.scrollBy(1);
     }
@@ -23,7 +23,7 @@ export default function Slider() {
           ref={sliderRef}
           showsButtons={false}
           showsPagination={true}
-          dotStyle={{ backgroundColor: "#E8E8E8", width: 8, height: 8 }}
+          dotStyle={{ backgroundColor: "#FFE1CE", width: 8, height: 8 }}
           activeDotStyle={{
             backgroundColor: "#FF7622",
             width: 10,
@@ -54,7 +54,7 @@ export default function Slider() {
           </TouchableOpacity>
           <TouchableOpacity
             className="py-5 mt-2"
-            onPress={() => router.push("/login")}
+            onPress={() => router.push("/(auth)/login")}
           >
             <Text className="text-secondary font-semibold text-xl text-center">
               Skip
