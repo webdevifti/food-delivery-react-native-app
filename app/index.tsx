@@ -54,7 +54,7 @@ export default function Slider() {
           </TouchableOpacity>
           <TouchableOpacity
             className="py-5 mt-2"
-            onPress={() => router.push("/(auth)/login")}
+            onPress={() => router.push("/(profile)/profile")}
           >
             <Text className="text-secondary font-semibold text-xl text-center">
               Skip
