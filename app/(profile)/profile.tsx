@@ -20,6 +20,20 @@ const profileImg = require("../../assets/images/profile.png");
 const profile = () => {
   return (
     <SafeAreaView className="px-8 bg-white">
+      <View className="flex flex-row items-center justify-between pt-5 mb-8">
+        <View className="flex flex-row items-center gap-4">
+          <TouchableOpacity
+            onPress={() => router.back()}
+            className="bg-[#F6F8FA] rounded-full w-[45px] h-[45px] flex flex-row items-center justify-center"
+          >
+            <Entypo name="chevron-small-left" size={24} color="black" />
+          </TouchableOpacity>
+          <Text className="text-[20px] font-semibold">Profile</Text>
+        </View>
+        <View className="bg-[#F6F8FA] rounded-full w-[45px] h-[45px] flex flex-row items-center justify-center">
+          <Feather name="more-horizontal" size={24} color="black" />
+        </View>
+      </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View></View>
         <View>

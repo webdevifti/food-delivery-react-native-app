@@ -1,13 +1,32 @@
+import Entypo from "@expo/vector-icons/Entypo";
 import Feather from "@expo/vector-icons/Feather";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
+import { router } from "expo-router";
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 const profileImg = require("../../assets/images/profile.png");
 const PersonalInfo = () => {
   return (
     <SafeAreaView className="px-8 bg-white h-full">
-      <View></View>
+      <View className="flex flex-row items-center justify-between pt-5 mb-8">
+        <View className="flex flex-row items-center gap-4">
+          <TouchableOpacity
+            onPress={() => router.back()}
+            className="bg-[#F6F8FA] rounded-full w-[45px] h-[45px] flex flex-row items-center justify-center"
+          >
+            <Entypo name="chevron-small-left" size={24} color="black" />
+          </TouchableOpacity>
+          <Text className="text-[20px] font-semibold">Personal Info</Text>
+        </View>
+        <TouchableOpacity
+          onPress={() => router.push("/(profile)/edit-profile")}
+        >
+          <Text className="underline text-primary font-semibold text-[20px]">
+            Edit
+          </Text>
+        </TouchableOpacity>
+      </View>
       <View>
         <View className="flex flex-row items-center gap-8 mx-auto mb-8">
           <Image source={profileImg} className="rounded-full" />
