@@ -1,4 +1,5 @@
 import AntDesign from "@expo/vector-icons/AntDesign";
+import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import { router } from "expo-router";
 import React, { useState } from "react";
 import {
@@ -21,7 +22,7 @@ const login = () => {
         resizeMethod="cover"
         className="flex-1 w-full h-full"
       >
-        <View className="flex flex-col items-center justify-center mt-40">
+        <View className="flex flex-col items-center justify-center mt-20">
           <Text className="text-white text-[30px] font-bold">Log In</Text>
           <Text className="text-gray-300 font-normal text-base">
             Please sign in to your existing account
@@ -90,6 +91,22 @@ const login = () => {
               Sign up
             </Text>
           </TouchableOpacity>
+        </View>
+        <View className="flex items-center justify-center">
+          <View className="text-center mt-5 mb-3">
+            <Text>Or</Text>
+          </View>
+          <View className="flex flex-row items-center gap-10">
+            <TouchableOpacity className="w-[62px] h-[62px] bg-[#395998] rounded-full text-white flex items-center justify-center ">
+              <FontAwesome5 name="facebook-f" size={24} color="white" />
+            </TouchableOpacity>
+            <TouchableOpacity className="w-[62px] h-[62px] bg-[#169CE8] rounded-full text-white flex items-center justify-center ">
+              <FontAwesome5 name="twitter" size={24} color="white" />
+            </TouchableOpacity>
+            <TouchableOpacity className="w-[62px] h-[62px] bg-[#1B1F2F] rounded-full text-white flex items-center justify-center ">
+              <FontAwesome5 name="apple" size={24} color="white" />
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </SafeAreaView>

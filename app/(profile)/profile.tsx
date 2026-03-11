@@ -19,7 +19,7 @@ const profileImg = require("../../assets/images/profile.png");
 
 const profile = () => {
   return (
-    <SafeAreaView className="px-8 bg-white">
+    <SafeAreaView className="px-8 bg-white mb-24">
       <View className="flex flex-row items-center justify-between pt-5 mb-8">
         <View className="flex flex-row items-center gap-4">
           <TouchableOpacity
