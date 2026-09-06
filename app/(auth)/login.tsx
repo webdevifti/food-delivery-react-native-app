@@ -77,7 +77,10 @@ const login = () => {
             <Text className="text-primary">Forgot Password</Text>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity className="bg-primary rounded-lg py-5 mt-2">
+        <TouchableOpacity
+          onPress={() => router.push("/(profile)/profile")}
+          className="bg-primary rounded-lg py-5 mt-2"
+        >
           <Text className="text-white font-semibold text-xl text-center">
             Login
           </Text>
