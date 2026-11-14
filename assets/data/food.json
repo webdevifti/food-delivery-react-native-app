@@ -1,0 +1,1216 @@
+{
+  "offer": {
+    "title": "Hurry Offers!",
+    "code": "#1243CD2",
+    "description": "Use the coupon get 25% discount"
+  },
+  "sizes": [
+    {
+      "label": "10\"",
+      "multiplier": 0.8
+    },
+    {
+      "label": "14\"",
+      "multiplier": 1
+    },
+    {
+      "label": "16\"",
+      "multiplier": 1.2
+    }
+  ],
+  "recentKeywords": [
+    "Burger",
+    "Sandwich",
+    "Pizza",
+    "Salad",
+    "Hot Dog"
+  ],
+  "categories": [
+    {
+      "id": "all",
+      "name": "All",
+      "title": "Popular Foods",
+      "image": null
+    },
+    {
+      "id": "hotdog",
+      "name": "Hot Dog",
+      "title": "Popular Hot Dogs",
+      "image": "https://images.unsplash.com/photo-1612392062631-94dd858cba88?w=200&q=80&auto=format&fit=crop"
+    },
+    {
+      "id": "burger",
+      "name": "Burger",
+      "title": "Popular Burgers",
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200&q=80&auto=format&fit=crop"
+    },
+    {
+      "id": "pizza",
+      "name": "Pizza",
+      "title": "Popular Pizzas",
+      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200&q=80&auto=format&fit=crop"
+    },
+    {
+      "id": "sandwich",
+      "name": "Sandwich",
+      "title": "Popular Sandwiches",
+      "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=200&q=80&auto=format&fit=crop"
+    },
+    {
+      "id": "salad",
+      "name": "Salad",
+      "title": "Popular Salads",
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200&q=80&auto=format&fit=crop"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "r1",
+      "name": "Rose Garden Restaurant",
+      "shortName": "Rose Garden",
+      "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=700&q=80&auto=format&fit=crop",
+      "tags": [
+        "Burger",
+        "Chicken",
+        "Rich",
+        "Wings"
+      ],
+      "categoryIds": [
+        "burger",
+        "salad"
+      ],
+      "rating": 4.7,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "gallery": [
+        "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1493770348161-369560ae357d?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1544025162-d76694265947?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=700&q=80&auto=format&fit=crop"
+      ],
+      "offers": [
+        "Delivery",
+        "Pick Up",
+        "Offer"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "r2",
+      "name": "Tasty Treat Gallery",
+      "shortName": "Tasty Treat",
+      "image": "https://images.unsplash.com/photo-1493770348161-369560ae357d?w=700&q=80&auto=format&fit=crop",
+      "tags": [
+        "Brunch",
+        "Waffles",
+        "Fresh",
+        "Bowls"
+      ],
+      "categoryIds": [
+        "sandwich",
+        "salad"
+      ],
+      "rating": 4.7,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "gallery": [
+        "https://images.unsplash.com/photo-1493770348161-369560ae357d?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1544025162-d76694265947?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=700&q=80&auto=format&fit=crop"
+      ],
+      "offers": [
+        "Delivery",
+        "Online payment available"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "r3",
+      "name": "Pansi Restaurant",
+      "shortName": "Pansi",
+      "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&q=80&auto=format&fit=crop",
+      "tags": [
+        "Steak",
+        "Grill",
+        "Rice",
+        "Spicy"
+      ],
+      "categoryIds": [
+        "burger",
+        "pizza",
+        "salad"
+      ],
+      "rating": 4.7,
+      "deliveryFee": "$2",
+      "time": "25 min",
+      "gallery": [
+        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1544025162-d76694265947?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=700&q=80&auto=format&fit=crop"
+      ],
+      "offers": [
+        "Delivery",
+        "Pick Up"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "r4",
+      "name": "American Spicy Burger Shop",
+      "shortName": "American Spicy",
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80&auto=format&fit=crop",
+      "tags": [
+        "Burger",
+        "Fries",
+        "Spicy",
+        "Shakes"
+      ],
+      "categoryIds": [
+        "hotdog",
+        "burger"
+      ],
+      "rating": 4.3,
+      "deliveryFee": "Free",
+      "time": "30 min",
+      "gallery": [
+        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=700&q=80&auto=format&fit=crop"
+      ],
+      "offers": [
+        "Delivery",
+        "Offer"
+      ],
+      "priceLevel": 1
+    },
+    {
+      "id": "r5",
+      "name": "Cafenio Coffee Club",
+      "shortName": "Cafenio",
+      "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=700&q=80&auto=format&fit=crop",
+      "tags": [
+        "Coffee",
+        "Pizza",
+        "Pasta",
+        "Dessert"
+      ],
+      "categoryIds": [
+        "burger",
+        "pizza",
+        "sandwich"
+      ],
+      "rating": 4.0,
+      "deliveryFee": "Free",
+      "time": "15 min",
+      "gallery": [
+        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=700&q=80&auto=format&fit=crop"
+      ],
+      "offers": [
+        "Pick Up",
+        "Online payment available"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "r6",
+      "name": "Uttora Coffee House",
+      "shortName": "Uttora",
+      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80&auto=format&fit=crop",
+      "tags": [
+        "Pizza",
+        "Italian",
+        "Coffee",
+        "Pasta"
+      ],
+      "categoryIds": [
+        "pizza"
+      ],
+      "rating": 4.8,
+      "deliveryFee": "$1",
+      "time": "20 min",
+      "gallery": [
+        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=700&q=80&auto=format&fit=crop"
+      ],
+      "offers": [
+        "Delivery",
+        "Pick Up",
+        "Offer",
+        "Online payment available"
+      ],
+      "priceLevel": 3
+    },
+    {
+      "id": "r7",
+      "name": "Kaji Firm Kitchen",
+      "shortName": "Kaji Firm",
+      "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=700&q=80&auto=format&fit=crop",
+      "tags": [
+        "Grill",
+        "Burger",
+        "Kebab",
+        "BBQ"
+      ],
+      "categoryIds": [
+        "burger",
+        "hotdog",
+        "sandwich"
+      ],
+      "rating": 4.5,
+      "deliveryFee": "Free",
+      "time": "35 min",
+      "gallery": [
+        "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=700&q=80&auto=format&fit=crop"
+      ],
+      "offers": [
+        "Delivery"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "r8",
+      "name": "Kabab Restaurant",
+      "shortName": "Kabab",
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=700&q=80&auto=format&fit=crop",
+      "tags": [
+        "Kabab",
+        "Ribs",
+        "BBQ",
+        "Wings"
+      ],
+      "categoryIds": [
+        "burger",
+        "sandwich",
+        "hotdog"
+      ],
+      "rating": 4.6,
+      "deliveryFee": "$3",
+      "time": "30 min",
+      "gallery": [
+        "https://images.unsplash.com/photo-1544025162-d76694265947?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&q=80&auto=format&fit=crop"
+      ],
+      "offers": [
+        "Delivery",
+        "Pick Up",
+        "Online payment available"
+      ],
+      "priceLevel": 1
+    },
+    {
+      "id": "r9",
+      "name": "Spicy Restaurant",
+      "shortName": "Spicy Restaurant",
+      "image": "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=700&q=80&auto=format&fit=crop",
+      "tags": [
+        "Burger",
+        "Sandwich",
+        "Pizza",
+        "Fries"
+      ],
+      "categoryIds": [
+        "burger",
+        "sandwich",
+        "pizza"
+      ],
+      "rating": 4.7,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "gallery": [
+        "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&q=80&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1493770348161-369560ae357d?w=700&q=80&auto=format&fit=crop"
+      ],
+      "offers": [
+        "Delivery",
+        "Pick Up",
+        "Offer"
+      ],
+      "priceLevel": 2
+    }
+  ],
+  "foods": [
+    {
+      "id": "f1",
+      "name": "Burger Bistro",
+      "restaurantId": "r1",
+      "categoryId": "burger",
+      "price": 40,
+      "rating": 4.7,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700&q=80&auto=format&fit=crop",
+      "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+      "ingredients": [
+        "salt",
+        "chicken",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f2",
+      "name": "Smokin' Burger",
+      "restaurantId": "r5",
+      "categoryId": "burger",
+      "price": 60,
+      "rating": 4.6,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=700&q=80&auto=format&fit=crop",
+      "description": "A double smashed patty with crispy onion strings, smoky sauce and melted cheddar on a toasted brioche bun.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f3",
+      "name": "Buffalo Burgers",
+      "restaurantId": "r7",
+      "categoryId": "burger",
+      "price": 75,
+      "rating": 4.5,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=700&q=80&auto=format&fit=crop",
+      "description": "Juicy grilled beef with fresh lettuce, tomato and our house buffalo sauce. Served with a side of crispy fries.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f4",
+      "name": "Bullseye Burgers",
+      "restaurantId": "r8",
+      "categoryId": "burger",
+      "price": 94,
+      "rating": 4.8,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=700&q=80&auto=format&fit=crop",
+      "description": "Topped with a sunny-side egg, crispy bacon, aged cheddar and caramelised onions. A true knife-and-fork burger.",
+      "ingredients": [
+        "salt",
+        "egg",
+        "cheese",
+        "chicken",
+        "chili"
+      ]
+    },
+    {
+      "id": "f5",
+      "name": "Cheese Stack",
+      "restaurantId": "r1",
+      "categoryId": "burger",
+      "price": 55,
+      "rating": 4.4,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=700&q=80&auto=format&fit=crop",
+      "description": "Three layers of beef and cheese, pickles and mustard. Simple, stacked and satisfying.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f6",
+      "name": "Fries & Burger Combo",
+      "restaurantId": "r3",
+      "categoryId": "burger",
+      "price": 48,
+      "rating": 4.3,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=700&q=80&auto=format&fit=crop",
+      "description": "A classic burger served with a basket of golden fries and a cold dipping sauce.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f7",
+      "name": "Pizza Calzone European",
+      "restaurantId": "r6",
+      "categoryId": "pizza",
+      "price": 32,
+      "rating": 4.7,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&q=80&auto=format&fit=crop",
+      "description": "Prosciutto e funghi is a pizza variety that is topped with tomato sauce, mushrooms and thin slices of cured ham.",
+      "ingredients": [
+        "salt",
+        "chicken",
+        "mushroom",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f8",
+      "name": "European Pizza",
+      "restaurantId": "r6",
+      "categoryId": "pizza",
+      "price": 70,
+      "rating": 4.6,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700&q=80&auto=format&fit=crop",
+      "description": "Wood-fired pizza with mozzarella, cherry tomatoes and fresh basil on a thin, crispy crust.",
+      "ingredients": [
+        "salt",
+        "cheese",
+        "herbs",
+        "mushroom",
+        "chili"
+      ]
+    },
+    {
+      "id": "f9",
+      "name": "Buffalo Pizza",
+      "restaurantId": "r5",
+      "categoryId": "pizza",
+      "price": 65,
+      "rating": 4.5,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=700&q=80&auto=format&fit=crop",
+      "description": "Spicy buffalo chicken, red onion and ranch drizzle over a mozzarella base.",
+      "ingredients": [
+        "salt",
+        "chicken",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f10",
+      "name": "Pepperoni Feast",
+      "restaurantId": "r3",
+      "categoryId": "pizza",
+      "price": 58,
+      "rating": 4.7,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=700&q=80&auto=format&fit=crop",
+      "description": "Loaded with pepperoni, mozzarella and a touch of oregano. A crowd-pleaser every time.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f11",
+      "name": "Classic Hot Dog",
+      "restaurantId": "r4",
+      "categoryId": "hotdog",
+      "price": 18,
+      "rating": 4.2,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1612392062631-94dd858cba88?w=700&q=80&auto=format&fit=crop",
+      "description": "A grilled beef frank in a soft potato bun with mustard and ketchup.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f12",
+      "name": "Loaded Hot Dog",
+      "restaurantId": "r7",
+      "categoryId": "hotdog",
+      "price": 26,
+      "rating": 4.4,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=700&q=80&auto=format&fit=crop",
+      "description": "Piled high with fresh salsa, jalapeños and crispy onions on a toasted bun.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f13",
+      "name": "Club Sandwich",
+      "restaurantId": "r8",
+      "categoryId": "sandwich",
+      "price": 24,
+      "rating": 4.3,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1539252554453-80ab65ce3586?w=700&q=80&auto=format&fit=crop",
+      "description": "Triple-decker with turkey, crisp lettuce, tomato and mayo on toasted bread.",
+      "ingredients": [
+        "salt",
+        "chicken",
+        "cheese",
+        "herbs",
+        "egg"
+      ]
+    },
+    {
+      "id": "f14",
+      "name": "Grilled Panini",
+      "restaurantId": "r2",
+      "categoryId": "sandwich",
+      "price": 22,
+      "rating": 4.5,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=700&q=80&auto=format&fit=crop",
+      "description": "Pressed panini with melted cheese, roasted vegetables and pesto.",
+      "ingredients": [
+        "salt",
+        "cheese",
+        "herbs",
+        "mushroom",
+        "chili"
+      ]
+    },
+    {
+      "id": "f15",
+      "name": "Rainbow Bowl",
+      "restaurantId": "r1",
+      "categoryId": "salad",
+      "price": 28,
+      "rating": 4.6,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=700&q=80&auto=format&fit=crop",
+      "description": "A colourful bowl of fresh greens, avocado, radish, chickpeas and a lemon dressing.",
+      "ingredients": [
+        "salt",
+        "herbs",
+        "egg",
+        "mushroom",
+        "chili"
+      ]
+    },
+    {
+      "id": "f16",
+      "name": "Salmon Power Bowl",
+      "restaurantId": "r2",
+      "categoryId": "salad",
+      "price": 36,
+      "rating": 4.8,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=700&q=80&auto=format&fit=crop",
+      "description": "Seared salmon over rice with edamame, cucumber and sesame dressing.",
+      "ingredients": [
+        "salt",
+        "fish",
+        "egg",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f17",
+      "name": "Citrus Garden Salad",
+      "restaurantId": "r2",
+      "categoryId": "salad",
+      "price": 21,
+      "rating": 4.2,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=700&q=80&auto=format&fit=crop",
+      "description": "Crisp leaves, orange segments and toasted seeds in a light vinaigrette.",
+      "ingredients": [
+        "salt",
+        "herbs",
+        "egg",
+        "mushroom",
+        "chili"
+      ]
+    },
+    {
+      "id": "f18",
+      "name": "Spicy Burger Deluxe",
+      "restaurantId": "r4",
+      "categoryId": "burger",
+      "price": 45,
+      "rating": 4.5,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=700&q=80&auto=format&fit=crop",
+      "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f19",
+      "name": "Chili Cheese Dog",
+      "restaurantId": "r4",
+      "categoryId": "hotdog",
+      "price": 22,
+      "rating": 4.3,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=700&q=80&auto=format&fit=crop",
+      "description": "A grilled frank smothered in chili and melted cheddar.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f20",
+      "name": "Crispy Chicken Burger",
+      "restaurantId": "r4",
+      "categoryId": "burger",
+      "price": 42,
+      "rating": 4.4,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=700&q=80&auto=format&fit=crop",
+      "description": "Buttermilk fried chicken with slaw and spicy mayo.",
+      "ingredients": [
+        "salt",
+        "chicken",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f21",
+      "name": "Burger Ferguson",
+      "restaurantId": "r9",
+      "categoryId": "burger",
+      "price": 40,
+      "rating": 4.7,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=700&q=80&auto=format&fit=crop",
+      "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f22",
+      "name": "Rockin' Burgers",
+      "restaurantId": "r9",
+      "categoryId": "burger",
+      "price": 40,
+      "rating": 4.6,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=700&q=80&auto=format&fit=crop",
+      "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f23",
+      "name": "Bullseye Stack",
+      "restaurantId": "r9",
+      "categoryId": "burger",
+      "price": 52,
+      "rating": 4.5,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=700&q=80&auto=format&fit=crop",
+      "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+      "ingredients": [
+        "salt",
+        "egg",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f24",
+      "name": "Spicy Chicken Burger",
+      "restaurantId": "r9",
+      "categoryId": "burger",
+      "price": 46,
+      "rating": 4.4,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=700&q=80&auto=format&fit=crop",
+      "description": "Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+      "ingredients": [
+        "salt",
+        "chicken",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f25",
+      "name": "Club Sandwich Deluxe",
+      "restaurantId": "r9",
+      "categoryId": "sandwich",
+      "price": 26,
+      "rating": 4.3,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1539252554453-80ab65ce3586?w=700&q=80&auto=format&fit=crop",
+      "description": "Triple-decker with turkey, crisp lettuce, tomato and mayo.",
+      "ingredients": [
+        "salt",
+        "chicken",
+        "cheese",
+        "herbs",
+        "egg"
+      ]
+    },
+    {
+      "id": "f26",
+      "name": "Smoky Pizza",
+      "restaurantId": "r9",
+      "categoryId": "pizza",
+      "price": 54,
+      "rating": 4.5,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=700&q=80&auto=format&fit=crop",
+      "description": "Smoked pepperoni, mozzarella and a drizzle of hot honey.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f27",
+      "name": "Meat Lovers Pizza",
+      "restaurantId": "r3",
+      "categoryId": "pizza",
+      "price": 62,
+      "rating": 4.5,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700&q=80&auto=format&fit=crop",
+      "description": "Sausage, pepperoni and bacon on a rich tomato base.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f28",
+      "name": "Chicken Caesar Bowl",
+      "restaurantId": "r3",
+      "categoryId": "salad",
+      "price": 29,
+      "rating": 4.4,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=700&q=80&auto=format&fit=crop",
+      "description": "Grilled chicken, romaine, parmesan and creamy Caesar dressing.",
+      "ingredients": [
+        "salt",
+        "chicken",
+        "cheese",
+        "herbs",
+        "egg"
+      ]
+    },
+    {
+      "id": "f29",
+      "name": "Smash Burger",
+      "restaurantId": "r5",
+      "categoryId": "burger",
+      "price": 52,
+      "rating": 4.4,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=700&q=80&auto=format&fit=crop",
+      "description": "Two smashed patties, American cheese and pickles.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f30",
+      "name": "Margherita Classic",
+      "restaurantId": "r5",
+      "categoryId": "pizza",
+      "price": 44,
+      "rating": 4.3,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&q=80&auto=format&fit=crop",
+      "description": "Tomato, fresh mozzarella and basil on a thin crust.",
+      "ingredients": [
+        "salt",
+        "cheese",
+        "herbs",
+        "mushroom",
+        "chili"
+      ]
+    },
+    {
+      "id": "f31",
+      "name": "Veggie Panini",
+      "restaurantId": "r5",
+      "categoryId": "sandwich",
+      "price": 20,
+      "rating": 4.2,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=700&q=80&auto=format&fit=crop",
+      "description": "Roasted vegetables, mozzarella and pesto, pressed hot.",
+      "ingredients": [
+        "salt",
+        "cheese",
+        "herbs",
+        "mushroom",
+        "chili"
+      ]
+    },
+    {
+      "id": "f32",
+      "name": "Four Cheese Pizza",
+      "restaurantId": "r6",
+      "categoryId": "pizza",
+      "price": 49,
+      "rating": 4.6,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=700&q=80&auto=format&fit=crop",
+      "description": "Mozzarella, gorgonzola, parmesan and fontina.",
+      "ingredients": [
+        "salt",
+        "cheese",
+        "herbs",
+        "mushroom",
+        "chili"
+      ]
+    },
+    {
+      "id": "f33",
+      "name": "Garden Pizza",
+      "restaurantId": "r6",
+      "categoryId": "pizza",
+      "price": 41,
+      "rating": 4.3,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=700&q=80&auto=format&fit=crop",
+      "description": "Peppers, olives, mushrooms and fresh herbs.",
+      "ingredients": [
+        "salt",
+        "cheese",
+        "herbs",
+        "mushroom",
+        "chili"
+      ]
+    },
+    {
+      "id": "f34",
+      "name": "BBQ Hot Dog",
+      "restaurantId": "r7",
+      "categoryId": "hotdog",
+      "price": 24,
+      "rating": 4.4,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1612392062631-94dd858cba88?w=700&q=80&auto=format&fit=crop",
+      "description": "Smoky BBQ sauce, crispy onions and a toasted bun.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f35",
+      "name": "Grill Sandwich",
+      "restaurantId": "r7",
+      "categoryId": "sandwich",
+      "price": 21,
+      "rating": 4.3,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1539252554453-80ab65ce3586?w=700&q=80&auto=format&fit=crop",
+      "description": "Grilled chicken, cheddar and caramelised onions.",
+      "ingredients": [
+        "salt",
+        "chicken",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f36",
+      "name": "Kebab Burger",
+      "restaurantId": "r8",
+      "categoryId": "burger",
+      "price": 38,
+      "rating": 4.4,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=700&q=80&auto=format&fit=crop",
+      "description": "Spiced lamb patty with yoghurt sauce and pickled onion.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f37",
+      "name": "Spicy Hot Dog",
+      "restaurantId": "r8",
+      "categoryId": "hotdog",
+      "price": 20,
+      "rating": 4.2,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=700&q=80&auto=format&fit=crop",
+      "description": "Jalapeños, hot sauce and crunchy fried onions.",
+      "ingredients": [
+        "salt",
+        "beef",
+        "cheese",
+        "herbs",
+        "chili"
+      ]
+    },
+    {
+      "id": "f38",
+      "name": "Veggie Burger",
+      "restaurantId": "r1",
+      "categoryId": "burger",
+      "price": 34,
+      "rating": 4.2,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=700&q=80&auto=format&fit=crop",
+      "description": "A hearty plant-based patty with avocado and tomato.",
+      "ingredients": [
+        "salt",
+        "herbs",
+        "cheese",
+        "mushroom",
+        "chili"
+      ]
+    },
+    {
+      "id": "f39",
+      "name": "Honey Wings Bowl",
+      "restaurantId": "r1",
+      "categoryId": "salad",
+      "price": 31,
+      "rating": 4.5,
+      "deliveryFee": "Free",
+      "time": "20 min",
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=700&q=80&auto=format&fit=crop",
+      "description": "Honey-glazed wings over crisp greens and cucumber.",
+      "ingredients": [
+        "salt",
+        "chicken",
+        "herbs",
+        "egg",
+        "chili"
+      ]
+    }
+  ],
+  "paymentMethods": [
+    {
+      "id": "cash",
+      "name": "Cash"
+    },
+    {
+      "id": "visa",
+      "name": "Visa"
+    },
+    {
+      "id": "mastercard",
+      "name": "Mastercard"
+    },
+    {
+      "id": "paypal",
+      "name": "PayPal"
+    }
+  ],
+  "orders": [
+    {
+      "id": "162432",
+      "status": "ongoing",
+      "createdAt": "2026-11-14T11:40:00",
+      "lines": [
+        {
+          "foodId": "f7",
+          "size": "14\"",
+          "qty": 2,
+          "unitPrice": 32
+        },
+        {
+          "foodId": "f33",
+          "size": "14\"",
+          "qty": 1,
+          "unitPrice": 41
+        }
+      ],
+      "stage": 1,
+      "address": "2118 Thornridge Cir. Syracuse",
+      "payment": "Cash on delivery"
+    },
+    {
+      "id": "242432",
+      "status": "ongoing",
+      "createdAt": "2026-11-14T12:05:00",
+      "lines": [
+        {
+          "foodId": "f21",
+          "size": "14\"",
+          "qty": 1,
+          "unitPrice": 40
+        },
+        {
+          "foodId": "f22",
+          "size": "14\"",
+          "qty": 1,
+          "unitPrice": 40
+        }
+      ],
+      "stage": 2,
+      "address": "2118 Thornridge Cir. Syracuse",
+      "payment": "Visa •••• 4242"
+    },
+    {
+      "id": "162411",
+      "status": "completed",
+      "createdAt": "2026-01-29T12:30:00",
+      "lines": [
+        {
+          "foodId": "f8",
+          "size": "14\"",
+          "qty": 1,
+          "unitPrice": 70
+        },
+        {
+          "foodId": "f32",
+          "size": "14\"",
+          "qty": 2,
+          "unitPrice": 49
+        }
+      ],
+      "stage": 3,
+      "address": "3235 Royal Ln. Mesa, New Jersey 34567",
+      "payment": "Mastercard •••• 8821"
+    },
+    {
+      "id": "242431",
+      "status": "completed",
+      "createdAt": "2026-01-30T12:30:00",
+      "lines": [
+        {
+          "foodId": "f4",
+          "size": "14\"",
+          "qty": 2,
+          "unitPrice": 94
+        }
+      ],
+      "stage": 3,
+      "address": "3235 Royal Ln. Mesa, New Jersey 34567",
+      "payment": "Cash on delivery"
+    },
+    {
+      "id": "240112",
+      "status": "canceled",
+      "createdAt": "2026-01-30T12:30:00",
+      "lines": [
+        {
+          "foodId": "f31",
+          "size": "14\"",
+          "qty": 1,
+          "unitPrice": 20
+        }
+      ],
+      "stage": 0,
+      "address": "4517 Washington Ave. Manchester",
+      "payment": "Visa •••• 4242"
+    }
+  ]
+}

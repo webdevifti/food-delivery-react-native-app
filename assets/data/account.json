@@ -1,0 +1,147 @@
+{
+  "notifications": [
+    {
+      "id": "n1",
+      "type": "delivery",
+      "title": "Your order is on the way",
+      "body": "Order #162432 has left the restaurant and will arrive in about 15 minutes.",
+      "time": "2 min ago",
+      "read": false
+    },
+    {
+      "id": "n2",
+      "type": "offer",
+      "title": "25% off your next order",
+      "body": "Use code #1243CD2 at checkout. Valid until Sunday.",
+      "time": "1 hour ago",
+      "read": false
+    },
+    {
+      "id": "n3",
+      "type": "order",
+      "title": "Order delivered",
+      "body": "Order #162411 was delivered. Enjoy your meal — and don't forget to rate it!",
+      "time": "Yesterday",
+      "read": true
+    },
+    {
+      "id": "n4",
+      "type": "system",
+      "title": "Welcome to Food",
+      "body": "Add a delivery address to get your food faster.",
+      "time": "2 days ago",
+      "read": true
+    },
+    {
+      "id": "n5",
+      "type": "offer",
+      "title": "Free delivery weekend",
+      "body": "Enjoy free delivery from selected restaurants all weekend long.",
+      "time": "3 days ago",
+      "read": true
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How do I place an order?",
+      "a": "Browse restaurants or search for a dish, add items to your cart, then tap Place order. Choose a payment method and confirm."
+    },
+    {
+      "q": "Can I change or cancel my order?",
+      "a": "You can cancel an ongoing order from My Orders > Ongoing > Cancel. Once the restaurant starts preparing it, cancellation may not be possible."
+    },
+    {
+      "q": "How long will my delivery take?",
+      "a": "Each restaurant shows an estimated delivery time. Busy hours and bad weather can add a few minutes."
+    },
+    {
+      "q": "What payment methods do you accept?",
+      "a": "You can pay with cash on delivery, or with a saved Visa or Mastercard. More methods are coming soon."
+    },
+    {
+      "q": "How do I add or change my delivery address?",
+      "a": "Go to Profile > Addresses. You can add, edit or delete addresses and label them Home, Work or Other."
+    },
+    {
+      "q": "What is the delivery fee?",
+      "a": "Many restaurants offer free delivery. Others show a small fee on their card, which is added to your total at checkout."
+    },
+    {
+      "q": "How do I use a coupon code?",
+      "a": "Offers appear on the home screen when available. Copy the code shown in the offer and apply it at checkout."
+    },
+    {
+      "q": "I have a problem with my order. What now?",
+      "a": "Contact support using the button below and include your order number. We'll get back to you as soon as we can."
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rv1",
+      "restaurantId": "r6",
+      "orderId": "162411",
+      "rating": 5,
+      "comment": "Crispy crust and fresh basil. Arrived hot and right on time!",
+      "createdAt": "2026-01-29T20:10:00"
+    },
+    {
+      "id": "rv2",
+      "restaurantId": "r9",
+      "orderId": "242431",
+      "rating": 4,
+      "comment": "Great burgers, juicy and well seasoned. The fries could be crispier.",
+      "createdAt": "2026-01-30T21:05:00"
+    },
+    {
+      "id": "rv3",
+      "restaurantId": "r1",
+      "rating": 5,
+      "comment": "My favourite place for a healthy bowl. Always fresh.",
+      "createdAt": "2026-01-18T13:40:00"
+    }
+  ],
+  "legal": {
+    "terms": {
+      "title": "Terms & Conditions",
+      "sections": [
+        {
+          "heading": "1. Using the app",
+          "body": "By creating an account you agree to use the app lawfully and to provide accurate information when ordering."
+        },
+        {
+          "heading": "2. Orders and payments",
+          "body": "Prices and delivery times are set by each restaurant. Your payment method is charged when you confirm an order."
+        },
+        {
+          "heading": "3. Cancellations",
+          "body": "Orders can be cancelled before the restaurant starts preparing them. Refunds, where due, return to the original payment method."
+        },
+        {
+          "heading": "4. Changes",
+          "body": "We may update these terms from time to time. Continued use of the app means you accept the updated terms."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "sections": [
+        {
+          "heading": "Information we collect",
+          "body": "We collect your name, email, delivery addresses and order history so we can deliver your food."
+        },
+        {
+          "heading": "Location",
+          "body": "Location access is optional and only used while the app is open to suggest nearby restaurants."
+        },
+        {
+          "heading": "Payments",
+          "body": "We store only the last four digits of your card. Full card numbers and security codes are never saved."
+        },
+        {
+          "heading": "Your choices",
+          "body": "You can edit your details, manage notifications or delete your account at any time from Settings."
+        }
+      ]
+    }
+  }
+}

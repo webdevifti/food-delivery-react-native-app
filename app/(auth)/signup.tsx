@@ -1,98 +1,115 @@
-import AntDesign from "@expo/vector-icons/AntDesign";
-import React, { useState } from "react";
-import {
-  ImageBackground,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import AuthLayout from "@/components/ui/AuthLayout";
+import FormField from "@/components/ui/FormField";
+import PrimaryButton from "@/components/ui/PrimaryButton";
+import { useUser } from "@/context/UserContext";
+import { emailError, hasErrors, passwordError } from "@/utils/validation";
+import { router } from "expo-router";
+import React, { useRef, useState } from "react";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
 
-const signup = () => {
-  const [showPassword, setShowPassword] = useState(false);
+export default function Signup() {
+  const { updateProfile } = useUser();
+  const emailRef = useRef<TextInput>(null);
+  const passwordRef = useRef<TextInput>(null);
+  const confirmRef = useRef<TextInput>(null);
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirm, setConfirm] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const errors = {
+    name: name.trim() ? undefined : "Name is required",
+    email: emailError(email),
+    password: passwordError(password),
+    confirm:
+      confirm !== password ? "Passwords do not match" : undefined,
+  };
+  const show = (key: keyof typeof errors) =>
+    submitted ? errors[key] : undefined;
+
+  const handleSignup = () => {
+    setSubmitted(true);
+    if (hasErrors(errors)) return;
+    updateProfile({ name: name.trim(), email: email.trim() });
+    router.push({
+      pathname: "/(auth)/verify",
+      params: { email: email.trim(), flow: "signup" },
+    });
+  };
 
   return (
-    <SafeAreaView className="bg-black h-full">
-      <ImageBackground
-        source={require("@/assets/images/auth-bg.png")}
-        resizeMethod="cover"
-        className="flex-1 w-full h-full"
-      >
-        <View className="flex flex-col items-center justify-center mt-20">
-          <Text className="text-white text-[30px] font-bold">Sign up</Text>
-          <Text className="text-gray-300 font-normal text-base">
-            Please sign in to your existing account
-          </Text>
-        </View>
-      </ImageBackground>
-      <View className="bg-white px-6 py-8 rounded-t-[30px]">
-        <View className="mb-5">
-          <Text className="mb-1 text-[14px] text-secondary">Name</Text>
-          <TextInput
-            placeholder="Enter name"
-            className="bg-[#F0F5FA] text-[#A0A5BA] placeholder:text-[#A0A5BA] rounded-lg px-5 py-5"
-          />
-        </View>
-        <View className="mb-5">
-          <Text className="mb-1 text-[14px] text-secondary">Email</Text>
-          <TextInput
-            placeholder="example@gmail.com"
-            className="bg-[#F0F5FA] text-[#A0A5BA] placeholder:text-[#A0A5BA] rounded-lg px-5 py-5"
-          />
-        </View>
-        <View className="relative mb-5">
-          <Text className="mb-1 text-[14px] text-secondary">Password</Text>
-          <TextInput
-            textContentType="password"
-            secureTextEntry={!showPassword}
-            placeholder="........"
-            className=" bg-[#F0F5FA] text-[#A0A5BA] placeholder:text-[#A0A5BA] rounded-lg px-5 py-5"
-          />
-          <TouchableOpacity
-            className="absolute right-4 top-11"
-            onPress={() => setShowPassword(!showPassword)}
-          >
-            <AntDesign
-              name={showPassword ? "eye" : "eye-invisible"}
-              size={24}
-              color="#A0A5BA"
-            />
-          </TouchableOpacity>
-        </View>
-        <View className="relative mb-5">
-          <Text className="mb-1 text-[14px] text-secondary">
-            Re-Type-Password
-          </Text>
-          <TextInput
-            textContentType="password"
-            secureTextEntry={!showPassword}
-            placeholder="........"
-            className=" bg-[#F0F5FA] text-[#A0A5BA] placeholder:text-[#A0A5BA] rounded-lg px-5 py-5"
-          />
-          <TouchableOpacity
-            className="absolute right-4 top-11"
-            onPress={() => setShowPassword(!showPassword)}
-          >
-            <AntDesign
-              name={showPassword ? "eye" : "eye-invisible"}
-              size={24}
-              color="#A0A5BA"
-            />
-          </TouchableOpacity>
-        </View>
+    <AuthLayout title="Sign Up" subtitle="Please sign up to get started">
+      <FormField
+        label="Name"
+        placeholder="John doe"
+        value={name}
+        onChangeText={setName}
+        error={show("name")}
+        autoCapitalize="words"
+        autoComplete="name"
+        textContentType="name"
+        returnKeyType="next"
+        onSubmitEditing={() => emailRef.current?.focus()}
+      />
+      <FormField
+        ref={emailRef}
+        label="Email"
+        placeholder="example@gmail.com"
+        value={email}
+        onChangeText={setEmail}
+        error={show("email")}
+        keyboardType="email-address"
+        autoCapitalize="none"
+        autoComplete="email"
+        textContentType="emailAddress"
+        returnKeyType="next"
+        onSubmitEditing={() => passwordRef.current?.focus()}
+      />
+      <FormField
+        ref={passwordRef}
+        label="Password"
+        password
+        placeholder="* * * * * * * * * *"
+        value={password}
+        onChangeText={setPassword}
+        error={show("password")}
+        textContentType="newPassword"
+        returnKeyType="next"
+        onSubmitEditing={() => confirmRef.current?.focus()}
+      />
+      <FormField
+        ref={confirmRef}
+        label="Re-type Password"
+        password
+        placeholder="* * * * * * * * * *"
+        value={confirm}
+        onChangeText={setConfirm}
+        error={show("confirm")}
+        textContentType="newPassword"
+        returnKeyType="done"
+        onSubmitEditing={handleSignup}
+      />
 
-        <TouchableOpacity className="bg-primary rounded-lg py-5 mt-2">
-          <Text className="text-white font-semibold text-xl text-center">
-            Signup
+      <PrimaryButton title="Sign Up" onPress={handleSignup} className="mt-2" />
+
+      <View className="mt-6 flex-row items-center justify-center">
+        <Text className="text-base text-textLight">
+          Already have an account?{" "}
+        </Text>
+        <TouchableOpacity
+          accessibilityRole="link"
+          hitSlop={8}
+          onPress={() =>
+            router.canGoBack() ? router.back() : router.replace("/(auth)/login")
+          }
+        >
+          <Text className="text-sm font-bold uppercase text-primary">
+            Log in
           </Text>
         </TouchableOpacity>
       </View>
-    </SafeAreaView>
+    </AuthLayout>
   );
-};
-
-export default signup;
-
-const styles = StyleSheet.create({});
+}

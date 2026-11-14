@@ -1,89 +1,82 @@
-import Entypo from "@expo/vector-icons/Entypo";
+import Avatar from "@/components/ui/Avatar";
+import Screen from "@/components/ui/Screen";
+import { useUser } from "@/context/UserContext";
 import Feather from "@expo/vector-icons/Feather";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import { router } from "expo-router";
-import React from "react";
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-const profileImg = require("../../assets/images/profile.png");
-const PersonalInfo = () => {
+import React, { ReactNode } from "react";
+import { Text, TouchableOpacity, View } from "react-native";
+
+function InfoRow({
+  icon,
+  label,
+  value,
+}: {
+  icon: ReactNode;
+  label: string;
+  value: string;
+}) {
   return (
-    <SafeAreaView className="px-8 bg-white h-full">
-      <View className="flex flex-row items-center justify-between pt-5 mb-8">
-        <View className="flex flex-row items-center gap-4">
-          <TouchableOpacity
-            onPress={() => router.back()}
-            className="bg-[#F6F8FA] rounded-full w-[45px] h-[45px] flex flex-row items-center justify-center"
-          >
-            <Entypo name="chevron-small-left" size={24} color="black" />
-          </TouchableOpacity>
-          <Text className="text-[20px] font-semibold">Personal Info</Text>
-        </View>
+    <View className="flex-row items-center gap-4">
+      <View className="h-10 w-10 items-center justify-center rounded-full bg-white">
+        {icon}
+      </View>
+      <View className="flex-1">
+        <Text className="text-xs font-semibold uppercase text-textLight">
+          {label}
+        </Text>
+        <Text className="mt-0.5 text-base font-semibold text-secondary">
+          {value || "—"}
+        </Text>
+      </View>
+    </View>
+  );
+}
+
+export default function PersonalInfo() {
+  const { profile } = useUser();
+
+  return (
+    <Screen
+      title="Personal Info"
+      right={
         <TouchableOpacity
+          accessibilityRole="button"
+          accessibilityLabel="Edit profile"
+          hitSlop={12}
           onPress={() => router.push("/(profile)/edit-profile")}
         >
-          <Text className="underline text-primary font-semibold text-[20px]">
-            Edit
-          </Text>
+          <Text className="text-lg font-semibold text-primary">Edit</Text>
         </TouchableOpacity>
+      }
+    >
+      <View className="mb-8 mt-2 items-center">
+        <Avatar uri={profile.photo} size={96} />
+        <Text className="mt-4 text-xl font-bold text-secondary">
+          {profile.name}
+        </Text>
+        {!!profile.bio && (
+          <Text className="mt-1 text-sm text-muted">{profile.bio}</Text>
+        )}
       </View>
-      <View>
-        <View className="flex flex-row items-center gap-8 mx-auto mb-8">
-          <Image source={profileImg} className="rounded-full" />
-          <View>
-            <Text className="text-[20px] font-bold mb-2">Eftekhar Alam</Text>
-            <Text className="text-[14px] text-[#A0A5BA]">I am food lover.</Text>
-          </View>
-        </View>
 
-        <View>
-          <View className="bg-[#F6F8FA] rounded-2xl p-5 ">
-            <View className="flex flex-row items-center gap-6 mb-4">
-              <View className="bg-white rounded-full p-2 items-center justify-center flex h-[40px] w-[40px]">
-                <Feather name="user" size={14} color="#FB6F3D" />
-              </View>
-              <View>
-                <Text className="text-base font-semibold  text-secondary uppercase">
-                  Full name
-                </Text>
-                <Text className="text-[12px] font-semibold text-[#6B6E82]">
-                  Eftekhar Alam
-                </Text>
-              </View>
-            </View>
-            <View className="flex flex-row items-center gap-6 mb-4">
-              <View className="bg-white rounded-full p-2 items-center justify-center flex h-[40px] w-[40px]">
-                <FontAwesome5 name="envelope" size={14} color="#413DFB" />
-              </View>
-              <View>
-                <Text className="text-base font-semibold  text-secondary uppercase">
-                  Email
-                </Text>
-                <Text className="text-[12px] font-semibold text-[#6B6E82]">
-                  example@mail.com
-                </Text>
-              </View>
-            </View>
-            <View className="flex flex-row items-center gap-6">
-              <View className="bg-white rounded-full p-2 items-center justify-center flex h-[40px] w-[40px]">
-                <Feather name="phone" size={14} color="#369BFF" />
-              </View>
-              <View>
-                <Text className="text-base font-semibold  text-secondary uppercase">
-                  Contact Number
-                </Text>
-                <Text className="text-[12px] font-semibold text-[#6B6E82]">
-                  +8801912345678
-                </Text>
-              </View>
-            </View>
-          </View>
-        </View>
+      <View className="gap-5 rounded-2xl bg-surface p-5">
+        <InfoRow
+          icon={<Feather name="user" size={16} color="#FB6F3D" />}
+          label="Full name"
+          value={profile.name}
+        />
+        <InfoRow
+          icon={<FontAwesome5 name="envelope" size={16} color="#413DFB" />}
+          label="Email"
+          value={profile.email}
+        />
+        <InfoRow
+          icon={<Feather name="phone" size={16} color="#369BFF" />}
+          label="Contact number"
+          value={profile.phone}
+        />
       </View>
-    </SafeAreaView>
+    </Screen>
   );
-};
-
-export default PersonalInfo;
-
-const styles = StyleSheet.create({});
+}

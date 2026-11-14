@@ -1,214 +1,151 @@
+import CircleButton from "@/components/food/CircleButton";
+import MenuRow from "@/components/ui/MenuRow";
+import Avatar from "@/components/ui/Avatar";
+import Screen from "@/components/ui/Screen";
+import { useAccount } from "@/context/AccountContext";
+import { useUser } from "@/context/UserContext";
+import { showAlert } from "@/utils/alerts";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Entypo from "@expo/vector-icons/Entypo";
 import Feather from "@expo/vector-icons/Feather";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import SimpleLineIcons from "@expo/vector-icons/SimpleLineIcons";
+import { Href, router } from "expo-router";
+import React, { ReactNode } from "react";
+import { Text, View } from "react-native";
 
-import { router } from "expo-router";
-import React from "react";
-import {
-  Image,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-const profileImg = require("../../assets/images/profile.png");
-
-const profile = () => {
-  return (
-    <SafeAreaView className="px-8 bg-white mb-24">
-      <View className="flex flex-row items-center justify-between pt-5 mb-8">
-        <View className="flex flex-row items-center gap-4">
-          <TouchableOpacity
-            onPress={() => router.back()}
-            className="bg-[#F6F8FA] rounded-full w-[45px] h-[45px] flex flex-row items-center justify-center"
-          >
-            <Entypo name="chevron-small-left" size={24} color="black" />
-          </TouchableOpacity>
-          <Text className="text-[20px] font-semibold">Profile</Text>
-        </View>
-        <View className="bg-[#F6F8FA] rounded-full w-[45px] h-[45px] flex flex-row items-center justify-center">
-          <Feather name="more-horizontal" size={24} color="black" />
-        </View>
-      </View>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <View></View>
-        <View>
-          <View className="flex flex-row items-center gap-8 mx-auto mb-8">
-            <Image source={profileImg} className="rounded-full" />
-            <View>
-              <Text className="text-[20px] font-bold mb-2">Eftekhar Alam</Text>
-              <Text className="text-[14px] text-[#A0A5BA]">
-                I am food lover.
-              </Text>
-            </View>
-          </View>
-
-          <View>
-            <View className="bg-[#F6F8FA] rounded-2xl p-5 mb-5">
-              <TouchableOpacity
-                onPress={() => router.push("/(profile)/personal-info")}
-                className="flex flex-row items-center justify-between mb-4"
-              >
-                <View className="flex flex-row items-center gap-8">
-                  <View className="bg-white rounded-full p-2 items-center justify-center flex h-[40px] w-[40px]">
-                    <Feather name="user" size={14} color="#FB6F3D" />
-                  </View>
-                  <Text className="text-base font-normal text-secondary">
-                    Personal Info
-                  </Text>
-                </View>
-                <Entypo name="chevron-small-right" size={24} color="#747783" />
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => router.push("/(profile)/addresses")}
-                className="flex flex-row items-center justify-between"
-              >
-                <View className="flex flex-row items-center gap-8">
-                  <View className="bg-white rounded-full p-2 items-center justify-center flex h-[40px] w-[40px]">
-                    <Entypo name="map" size={14} color="#413DFB" />
-                  </View>
-                  <Text className="text-base font-normal text-secondary">
-                    Addresses
-                  </Text>
-                </View>
-                <Entypo name="chevron-small-right" size={24} color="#747783" />
-              </TouchableOpacity>
-            </View>
-
-            <View className="bg-[#F6F8FA] rounded-2xl p-5 mb-5">
-              <TouchableOpacity
-                onPress={() => router.push("/(profile)/personal-info")}
-                className="flex flex-row items-center justify-between mb-4"
-              >
-                <View className="flex flex-row items-center gap-8">
-                  <View className="bg-white rounded-full p-2 items-center justify-center flex h-[40px] w-[40px]">
-                    <SimpleLineIcons name="bag" size={14} color="#369BFF" />
-                  </View>
-                  <Text className="text-base font-normal text-secondary">
-                    Cart
-                  </Text>
-                </View>
-                <Entypo name="chevron-small-right" size={24} color="#747783" />
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => router.push("/(profile)/addresses")}
-                className="flex flex-row items-center justify-between mb-4"
-              >
-                <View className="flex flex-row items-center gap-8">
-                  <View className="bg-white rounded-full p-2 items-center justify-center flex h-[40px] w-[40px]">
-                    <Feather name="heart" size={14} color="#B33DFB" />
-                  </View>
-                  <Text className="text-base font-normal text-secondary">
-                    Favourite
-                  </Text>
-                </View>
-                <Entypo name="chevron-small-right" size={24} color="#747783" />
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => router.push("/(profile)/addresses")}
-                className="flex flex-row items-center justify-between mb-4"
-              >
-                <View className="flex flex-row items-center gap-8">
-                  <View className="bg-white rounded-full p-2 items-center justify-center flex h-[40px] w-[40px]">
-                    <Feather name="bell" size={14} color="#FFAA2A" />
-                  </View>
-                  <Text className="text-base font-normal text-secondary">
-                    Notifications
-                  </Text>
-                </View>
-                <Entypo name="chevron-small-right" size={24} color="#747783" />
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => router.push("/(profile)/addresses")}
-                className="flex flex-row items-center justify-between mb-4"
-              >
-                <View className="flex flex-row items-center gap-8">
-                  <View className="bg-white rounded-full p-2 items-center justify-center flex h-[40px] w-[40px]">
-                    <Feather name="credit-card" size={14} color="#369BFF" />
-                  </View>
-                  <Text className="text-base font-normal text-secondary">
-                    Payment Methods
-                  </Text>
-                </View>
-                <Entypo name="chevron-small-right" size={24} color="#747783" />
-              </TouchableOpacity>
-            </View>
-
-            <View className="bg-[#F6F8FA] rounded-2xl p-5 mb-5">
-              <TouchableOpacity
-                onPress={() => router.push("/(profile)/personal-info")}
-                className="flex flex-row items-center justify-between mb-4"
-              >
-                <View className="flex flex-row items-center gap-8">
-                  <View className="bg-white rounded-full p-2 items-center justify-center flex h-[40px] w-[40px]">
-                    <AntDesign
-                      name="question-circle"
-                      size={14}
-                      color="#FB6D3A"
-                    />
-                  </View>
-                  <Text className="text-base font-normal text-secondary">
-                    FAQs
-                  </Text>
-                </View>
-                <Entypo name="chevron-small-right" size={24} color="#747783" />
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => router.push("/(profile)/addresses")}
-                className="flex flex-row items-center justify-between mb-4"
-              >
-                <View className="flex flex-row items-center gap-8">
-                  <View className="bg-white rounded-full p-2 items-center justify-center flex h-[40px] w-[40px]">
-                    <MaterialIcons name="reviews" size={14} color="#2AE1E1" />
-                  </View>
-                  <Text className="text-base font-normal text-secondary">
-                    User Reviews
-                  </Text>
-                </View>
-                <Entypo name="chevron-small-right" size={24} color="#747783" />
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => router.push("/(profile)/addresses")}
-                className="flex flex-row items-center justify-between mb-4"
-              >
-                <View className="flex flex-row items-center gap-8">
-                  <View className="bg-white rounded-full p-2 items-center justify-center flex h-[40px] w-[40px]">
-                    <Feather name="settings" size={14} color="#413DFB" />
-                  </View>
-                  <Text className="text-base font-normal text-secondary">
-                    Settings
-                  </Text>
-                </View>
-                <Entypo name="chevron-small-right" size={24} color="#747783" />
-              </TouchableOpacity>
-            </View>
-            <View className="bg-[#F6F8FA] rounded-2xl p-5">
-              <TouchableOpacity
-                onPress={() => router.push("/(profile)/personal-info")}
-                className="flex flex-row items-center justify-between"
-              >
-                <View className="flex flex-row items-center gap-8">
-                  <View className="bg-white rounded-full p-2 items-center justify-center flex h-[40px] w-[40px]">
-                    <MaterialIcons name="logout" size={14} color="#FB4A59" />
-                  </View>
-                  <Text className="text-base font-normal text-secondary">
-                    Logout
-                  </Text>
-                </View>
-                <Entypo name="chevron-small-right" size={24} color="#747783" />
-              </TouchableOpacity>
-            </View>
-          </View>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
+type Item = {
+  label: string;
+  icon: ReactNode;
+  route: Href;
+  /** Shows a count bubble, e.g. unread notifications. */
+  badgeKey?: "unread";
 };
 
-export default profile;
+const SECTIONS: Item[][] = [
+  [
+    {
+      label: "Personal Info",
+      icon: <Feather name="user" size={16} color="#FB6F3D" />,
+      route: "/(profile)/personal-info",
+    },
+    {
+      label: "Addresses",
+      icon: <Entypo name="map" size={16} color="#413DFB" />,
+      route: "/(profile)/addresses",
+    },
+  ],
+  [
+    {
+      label: "My Orders",
+      icon: <Feather name="clipboard" size={16} color="#FB6F3D" />,
+      route: "/(main)/orders",
+    },
+    {
+      label: "Cart",
+      icon: <SimpleLineIcons name="bag" size={16} color="#369BFF" />,
+      route: "/(main)/cart",
+    },
+    {
+      label: "Favourite",
+      icon: <Feather name="heart" size={16} color="#B33DFB" />,
+      route: "/(profile)/favourites",
+    },
+    {
+      label: "Notifications",
+      icon: <Feather name="bell" size={16} color="#FFAA2A" />,
+      route: "/(profile)/notifications",
+      badgeKey: "unread",
+    },
+    {
+      label: "Payment Method",
+      icon: <Feather name="credit-card" size={16} color="#369BFF" />,
+      route: { pathname: "/(main)/payment", params: { manage: "1" } },
+    },
+  ],
+  [
+    {
+      label: "FAQs",
+      icon: <AntDesign name="question-circle" size={16} color="#FB6D3A" />,
+      route: "/(profile)/faqs",
+    },
+    {
+      label: "User Reviews",
+      icon: <MaterialCommunityIcons name="apple-keyboard-command" size={16} color="#2AE1E1" />,
+      route: "/(profile)/reviews",
+    },
+    {
+      label: "Settings",
+      icon: <Feather name="settings" size={16} color="#413DFB" />,
+      route: "/(profile)/settings",
+    },
+  ],
+];
 
-const styles = StyleSheet.create({});
+export default function Profile() {
+  const { profile } = useUser();
+  const { unreadCount } = useAccount();
+
+  const open = (item: Item) => router.push(item.route);
+
+  const confirmLogout = () =>
+    showAlert("Log out", "Are you sure you want to log out?", [
+      { text: "Cancel", style: "cancel" },
+      {
+        text: "Log out",
+        style: "destructive",
+        onPress: () => router.replace("/(auth)/login"),
+      },
+    ]);
+
+  return (
+    <Screen
+      title="Profile"
+      right={
+        <CircleButton
+          label="Edit profile"
+          onPress={() => router.push("/(profile)/edit-profile")}
+        >
+          <Feather name="more-horizontal" size={22} color="#181C2E" />
+        </CircleButton>
+      }
+    >
+      <View className="mb-8 mt-2 flex-row items-center gap-6">
+        <Avatar uri={profile.photo} size={100} />
+        <View className="flex-1">
+          <Text numberOfLines={1} className="text-xl font-bold text-secondary">
+            {profile.name}
+          </Text>
+          {!!profile.bio && (
+            <Text numberOfLines={2} className="mt-1 text-sm text-muted">
+              {profile.bio}
+            </Text>
+          )}
+        </View>
+      </View>
+
+      {SECTIONS.map((items, i) => (
+        <View key={i} className="mb-5 gap-4 rounded-2xl bg-surface p-5">
+          {items.map((item) => (
+            <MenuRow
+              key={item.label}
+              label={item.label}
+              icon={item.icon}
+              badge={item.badgeKey === "unread" ? unreadCount : undefined}
+              onPress={() => open(item)}
+            />
+          ))}
+        </View>
+      ))}
+
+      <View className="rounded-2xl bg-surface p-5">
+        <MenuRow
+          label="Log Out"
+          icon={<MaterialIcons name="logout" size={16} color="#FB4A59" />}
+          onPress={confirmLogout}
+        />
+      </View>
+    </Screen>
+  );
+}

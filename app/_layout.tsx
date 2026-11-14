@@ -1,44 +1,48 @@
-import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import { useEffect, useState } from "react";
-import { Image, StyleSheet, View } from "react-native";
-import logo from "../assets/images/logo.png";
+import { Stack } from "expo-router";
+import React, { useEffect, useState } from "react";
+import SplashView from "../components/SplashView";
+import { AccountProvider } from "../context/AccountContext";
+import { CartProvider } from "../context/CartContext";
+import { OrdersProvider } from "../context/OrdersContext";
+import { PaymentProvider } from "../context/PaymentContext";
+import { UserProvider } from "../context/UserContext";
 import "../global.css";
 
 SplashScreen.preventAutoHideAsync();
 
+const SPLASH_DURATION_MS = 2200;
+
 export default function RootLayout() {
-  const [isReady, setIsReady] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    async function prepare() {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      setIsReady(true);
-      await SplashScreen.hideAsync();
-    }
-    prepare();
+    const id = setTimeout(() => setShowSplash(false), SPLASH_DURATION_MS);
+    return () => clearTimeout(id);
   }, []);
 
-  if (!isReady) {
-    return (
-      <View style={styles.container}>
-        <Image source={logo} style={styles.logo} resizeMode="contain" />
-      </View>
-    );
-  } else {
-    return <Stack screenOptions={{ headerShown: false }} />;
+  if (showSplash) {
+    // Hide the native splash only once our branded one is on screen.
+    return <SplashView onReady={() => SplashScreen.hideAsync()} />;
   }
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#ffffff",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  logo: {
-    width: 150,
-    height: 150,
-  },
-});
+  return (
+    <UserProvider>
+      <CartProvider>
+        <PaymentProvider>
+          <AccountProvider>
+            <OrdersProvider>
+              <Stack
+                screenOptions={{
+                  headerShown: false,
+                  animation: "slide_from_right",
+                  contentStyle: { backgroundColor: "#FFFFFF" },
+                }}
+              />
+            </OrdersProvider>
+          </AccountProvider>
+        </PaymentProvider>
+      </CartProvider>
+    </UserProvider>
+  );
+}

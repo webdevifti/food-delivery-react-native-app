@@ -1,121 +1,130 @@
+import AuthLayout from "@/components/ui/AuthLayout";
+import FormField from "@/components/ui/FormField";
+import PrimaryButton from "@/components/ui/PrimaryButton";
+import { emailError, hasErrors } from "@/utils/validation";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import { router } from "expo-router";
-import React, { useState } from "react";
-import {
-  ImageBackground,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-const login = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const [checked, setChecked] = useState(false);
+import React, { useRef, useState } from "react";
+import { Text, TextInput, TouchableOpacity, View } from "react-native";
+
+const SOCIALS = [
+  { name: "facebook-f", label: "Facebook", bg: "#395998" },
+  { name: "twitter", label: "Twitter", bg: "#169CE8" },
+  { name: "apple", label: "Apple", bg: "#1B1F2F" },
+] as const;
+
+export default function Login() {
+  const passwordRef = useRef<TextInput>(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [remember, setRemember] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const errors = {
+    email: emailError(email),
+    password: password ? undefined : "Password is required",
+  };
+
+  const handleLogin = () => {
+    setSubmitted(true);
+    if (hasErrors(errors)) return;
+    router.replace("/(main)/home");
+  };
 
   return (
-    <SafeAreaView className="bg-black h-full">
-      <ImageBackground
-        source={require("@/assets/images/auth-bg.png")}
-        resizeMethod="cover"
-        className="flex-1 w-full h-full"
-      >
-        <View className="flex flex-col items-center justify-center mt-20">
-          <Text className="text-white text-[30px] font-bold">Log In</Text>
-          <Text className="text-gray-300 font-normal text-base">
-            Please sign in to your existing account
-          </Text>
-        </View>
-      </ImageBackground>
-      <View className="bg-white px-6 py-8 rounded-t-[30px]">
-        <View className="mb-5">
-          <Text className="mb-1 text-[14px] text-secondary">Email</Text>
-          <TextInput
-            placeholder="example@gmail.com"
-            className="bg-[#F0F5FA] text-[#A0A5BA] placeholder:text-[#A0A5BA] rounded-lg px-5 py-5"
-          />
-        </View>
-        <View className="relative mb-5">
-          <Text className="mb-1 text-[14px] text-secondary">Password</Text>
-          <TextInput
-            textContentType="password"
-            secureTextEntry={!showPassword}
-            placeholder="........"
-            className=" bg-[#F0F5FA] text-[#A0A5BA] placeholder:text-[#A0A5BA] rounded-lg px-5 py-5"
-          />
-          <TouchableOpacity
-            className="absolute right-4 top-11"
-            onPress={() => setShowPassword(!showPassword)}
-          >
-            <AntDesign
-              name={showPassword ? "eye" : "eye-invisible"}
-              size={24}
-              color="#A0A5BA"
-            />
-          </TouchableOpacity>
-        </View>
-        <View className="flex flex-row items-center justify-between mb-5">
-          <TouchableOpacity
-            className="flex-row items-center gap-2"
-            onPress={() => setChecked(!checked)}
-            activeOpacity={0.8}
-          >
-            <View
-              className={`w-6 h-6 rounded border-2 flex items-center justify-center ${
-                checked ? "bg-primary border-primary" : "border-light"
-              }`}
-            >
-              {checked && <AntDesign name="check" size={16} color="white" />}
-            </View>
-            <Text className="text-gray-700 text-base">Remember me</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => router.push("/(auth)/forgot-password")}
-          >
-            <Text className="text-primary">Forgot Password</Text>
-          </TouchableOpacity>
-        </View>
+    <AuthLayout
+      title="Log In"
+      subtitle="Please sign in to your existing account"
+      showBack={false}
+    >
+      <FormField
+        label="Email"
+        placeholder="example@gmail.com"
+        value={email}
+        onChangeText={setEmail}
+        error={submitted ? errors.email : undefined}
+        keyboardType="email-address"
+        autoCapitalize="none"
+        autoComplete="email"
+        textContentType="emailAddress"
+        returnKeyType="next"
+        onSubmitEditing={() => passwordRef.current?.focus()}
+      />
+      <FormField
+        ref={passwordRef}
+        label="Password"
+        password
+        placeholder="* * * * * * * * * *"
+        value={password}
+        onChangeText={setPassword}
+        error={submitted ? errors.password : undefined}
+        autoComplete="current-password"
+        textContentType="password"
+        returnKeyType="done"
+        onSubmitEditing={handleLogin}
+        containerClassName="mb-5"
+      />
+
+      <View className="mb-6 flex-row items-center justify-between">
         <TouchableOpacity
-          onPress={() => router.push("/(profile)/profile")}
-          className="bg-primary rounded-lg py-5 mt-2"
+          accessibilityRole="checkbox"
+          accessibilityState={{ checked: remember }}
+          activeOpacity={0.8}
+          hitSlop={8}
+          onPress={() => setRemember((v) => !v)}
+          className="flex-row items-center gap-2"
         >
-          <Text className="text-white font-semibold text-xl text-center">
-            Login
+          <View
+            className={`h-5 w-5 items-center justify-center rounded border ${
+              remember ? "border-primary bg-primary" : "border-[#CBD3E0]"
+            }`}
+          >
+            {remember && <AntDesign name="check" size={14} color="white" />}
+          </View>
+          <Text className="text-sm text-textLight">Remember me</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          accessibilityRole="link"
+          hitSlop={8}
+          onPress={() => router.push("/(auth)/forgot-password")}
+        >
+          <Text className="text-sm text-primary">Forgot Password</Text>
+        </TouchableOpacity>
+      </View>
+
+      <PrimaryButton title="Log In" onPress={handleLogin} />
+
+      <View className="mt-6 flex-row items-center justify-center">
+        <Text className="text-base text-textLight">
+          Don&apos;t have an account?{" "}
+        </Text>
+        <TouchableOpacity
+          accessibilityRole="link"
+          hitSlop={8}
+          onPress={() => router.push("/(auth)/signup")}
+        >
+          <Text className="text-sm font-bold uppercase text-primary">
+            Sign up
           </Text>
         </TouchableOpacity>
-        <View className="mt-8 flex flex-row items-center gap-1 justify-center">
-          <Text className="text-base font-normal text-gray-500">
-            Don't have an account?{" "}
-          </Text>
-          <TouchableOpacity onPress={() => router.push("/(auth)/signup")}>
-            <Text className="text-primary uppercase font-semibold text-base">
-              Sign up
-            </Text>
-          </TouchableOpacity>
-        </View>
-        <View className="flex items-center justify-center">
-          <View className="text-center mt-5 mb-3">
-            <Text>Or</Text>
-          </View>
-          <View className="flex flex-row items-center gap-10">
-            <TouchableOpacity className="w-[62px] h-[62px] bg-[#395998] rounded-full text-white flex items-center justify-center ">
-              <FontAwesome5 name="facebook-f" size={24} color="white" />
-            </TouchableOpacity>
-            <TouchableOpacity className="w-[62px] h-[62px] bg-[#169CE8] rounded-full text-white flex items-center justify-center ">
-              <FontAwesome5 name="twitter" size={24} color="white" />
-            </TouchableOpacity>
-            <TouchableOpacity className="w-[62px] h-[62px] bg-[#1B1F2F] rounded-full text-white flex items-center justify-center ">
-              <FontAwesome5 name="apple" size={24} color="white" />
-            </TouchableOpacity>
-          </View>
-        </View>
       </View>
-    </SafeAreaView>
+
+      <Text className="mt-6 text-center text-base text-textLight">Or</Text>
+      <View className="mt-4 flex-row items-center justify-center gap-[30px]">
+        {SOCIALS.map((s) => (
+          <TouchableOpacity
+            key={s.name}
+            accessibilityRole="button"
+            accessibilityLabel={`Continue with ${s.label}`}
+            activeOpacity={0.8}
+            style={{ backgroundColor: s.bg }}
+            className="h-[62px] w-[62px] items-center justify-center rounded-full"
+          >
+            <FontAwesome5 name={s.name} size={24} color="white" />
+          </TouchableOpacity>
+        ))}
+      </View>
+    </AuthLayout>
   );
-};
-
-export default login;
-
-const styles = StyleSheet.create({});
+}
